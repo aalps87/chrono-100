@@ -457,7 +457,7 @@ samp{
 @media screen and (min-width: 900px){
     .list{
 		display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr)); /* Muda para 1 coluna abaixo de 768px */
+        grid-template-columns: repeat(2, minmax(0, 2fr)); /* Muda para 1 coluna abaixo de 768px */
     }
 }
 /*end product-list*/
@@ -476,8 +476,7 @@ samp{
 .content p {
     font-size: 20px;
 	width: 600px;
-
-	color: #434657;
+	color: #6b7088;
 }
 .content-testmonial{
 	padding-top: 20px;

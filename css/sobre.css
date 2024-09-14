@@ -18,14 +18,6 @@ body{
     height: 100vh;
 }
 
-main {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    height: 100vh;
-}
-
 /*navbar*/
 a::after {
     content: '';
@@ -65,40 +57,276 @@ a .no-underline::after {
     margin-left: 20px;
 }
 
-.grupo_botao_triplo {
-    background-color: #17161A;
-    padding-bottom: 50px;
+.grupo-botao-triplo {
+    background-image: url(../img/teste3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-bottom: 70px;
+    padding-top: 20px;
 }
 
-.grupo_botao {
+.grupo-botao {
     display: flex;
     justify-content: center;
     padding-top: 75px;
     padding-bottom: 30px;
+    gap: 20px;
 }
 
-.Texto_botao_triplo {
+.Texto-botao-triplo {
     display: flex;
     justify-content: center;
 }
 
-.grupo_botao_triplo p {
-    color: #243863;
-    width: 60%;
-    letter-spacing: 2px;
+.grupo-botao-triplo p {
+    color: #6b7088;
+    width: 50%;
     line-height: 30px;
-
+    text-align: center;
 }
-
-
-
 @media(max-width: 991px){
 	.sidebar{
 		background-color: rgba(255, 255, 255, 0.194) !important;
 		backdrop-filter: blur(10px);
 	}
+    .grupo-botao-triplo p{
+        width: 90%;
+    }
 }
 /*end navbar*/
 .pao_crumb{
     background-color: #1C1B20;
+}
+
+button {
+    font-size: 14px;
+    padding: 1em 2.7em;
+    font-weight: 500;
+    background: #1f2937;
+    color: white;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.6em;
+    cursor: pointer;
+  }
+  
+  .gradient {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 0.6em;
+    margin-top: -0.25em;
+  }
+  
+  .label {
+    position: relative;
+    top: -1px;
+  }
+  
+  .transition {
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    transition-duration: 500ms;
+    background-color: rgba(16, 185, 129, 0.6);
+    border-radius: 9999px;
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  button:hover .transition {
+    width: 14em;
+    height: 14em;
+  }
+  
+  button:active {
+    transform: scale(0.97);
+  }
+  .grupo_botao button{
+    gap: 10px;
+  }
+
+    /*______Card______*/
+  .card {
+    width: 290px;
+    height: 316px;
+    background: rgb(33,33,33);
+    box-shadow: 7px 5px 10px rgba(0, 0, 0, 0.333);
+    border: none;
+  }
+  .card-about{
+    flex-wrap: wrap;
+  }
+  .imge {
+    height: 70px;
+    background-color: #ff5858;
+  }
+  
+  .imge .Usericon {
+    background-color: #414141;
+    transform: translateX(10px) translateY(10px);
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+  }
+  .imge .Usericon img{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+  }
+  .imge .UserName {
+    background-color: #414141;
+    width: 74px;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    transform: translateX(70px) translateY(-35px);
+  }
+  
+  .imge .Id {
+    background-color: #414141;
+    border-radius: 5px;
+    width: 100px;
+    border-color: #262626;
+    color: #a7a3a3;
+    font-size: 12px;
+    font-weight: bold;
+    transform: translateX(70px) translateY(-45px);
+
+  }
+  .Description {
+    border-color: #141414;
+    background-color: #414141;
+    transform: translate(5px, 6px);
+    width: 270px;
+    height: 180px;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-right: 10px;
+  }
+  .Description img{
+    width: 100%;
+    height: 180px;
+    border-radius: 5px;
+  }
+  
+  /*______Social Media______*/
+  .social-media:before {
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 2px;
+    transform: translatey(10px);
+    background: #414141;
+    margin-top: 5px;
+  }
+  
+  .social-media a {
+    margin-right: 13px;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .social-media a:last-child {
+    margin-right: 0;
+  }
+  
+  .social-media a i {
+    color: #ff5858;
+    transform: translatex(75px) translateY(20px);
+    width: 20px;
+    font-size: 25px;
+    fill: currentColor;
+  }
+  
+  h1, h3{
+    color: #33567D;
+  }
+  p{
+    color: #6b7088;
+  }
+  .hero-content{
+    width: 1200px;
+    margin-top: 70px;
+    margin-bottom: 70px;
+  }
+  .content-text{
+    margin-top: 30px;
+  }
+  .content-img{
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  @media (max-width: 1000px){
+    .hero-content{
+        display: flex;
+        flex-direction: column;
+    }
+    .content-img{
+        margin-left: 0px;
+        margin-right: 0px;
+      }
+      .content-text{
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+      }
+      .content-text p{
+        text-align: center;
+        width: 600px;
+      }
+  }
+  @media (max-width: 620px){
+    .content-text p{
+        width: 100%;
+    }
+    .content-img{
+        background-image: red;
+        margin-left: 0px;
+        margin-right: 0px;
+        width: 100%;
+    }
+    .content-img img{
+        width: 90%;
+    }
+    .card-about{
+        display: flex;
+        flex-wrap: unset;
+        flex-direction: column;
+    }
+
+  }
+  @media (max-width: 520px){
+    .grupo-botao{
+        display: flex;
+        flex-direction: column;
+        
+    }
+  }
+
+footer{
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+    padding-top: 20px;
+    width: 100%;
+}
+
+.imagem_footer {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    padding: 50px;
+}
+.imagem_footer img {
+    width: 350px; 
+    height: 240px;
 }
