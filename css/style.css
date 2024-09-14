@@ -640,7 +640,7 @@ footer{
 
 @media screen and (max-width: 500px){
     .titulo-1, .list-title{
-        font-size: 30px;
+        font-size:28px;
     }
     .texto-1, .list-paragrafo{
         font-size: 17px;
