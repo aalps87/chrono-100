@@ -75,6 +75,7 @@ picture img{
 
 .product{
     margin-bottom: 50px;
+    margin-top: 50px;
 }
 .product:hover {
     background-color: white;
