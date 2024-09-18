@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+@media print {
+ .table, .table__body {
+  overflow: visible;
+  height: auto !important;
+  width: auto !important;
+ }
+}
+
+/*@page {
+    size: landscape;
+    margin: 0; 
+}*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1, h2, h3, .btn, .nav-link{
+    font-family: "Teko";
+}
+.nav-link{
+    letter-spacing: 3px;
+    font-size: 20px;
+}
+h4, h5, p, b{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+body{
+    background-color: #17161A;
+    overflow-x: hidden;
+}
+
+main {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/*navbar*/
+a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: transparent;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    transform-origin: bottom left;
+}
+
+a:hover::after {
+    transform: scaleX(1);
+    background-color: rgba(21, 79, 146);
+}
+
+a .no-underline::after {
+    content: none;
+}
+
+@media(max-width: 991px){
+	.sidebar{
+		background-color: rgba(255, 255, 255, 0.194) !important;
+		backdrop-filter: blur(10px);
+	}
+}
+
+.bodya {
+    min-height: 100vh;
+    background: url(images/html_table.jpg) center / cover; /*imagem de fundo*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main.table {
+    width: 82vw;
+    height: 90vh;
+    background-color: #19304A; /*O 5 é o valor da transparência*/
+
+    backdrop-filter: blur(7px); /*filtro de blur no fundo*/
+    box-shadow: 0 .4rem .8rem #0005;
+    border-radius: .8rem;
+
+    overflow: hidden; /*não deixa o conteúdo dentro sair pra fora (overflow)*/
+}
+
+.table__header {
+    width: 100%;
+    height: 10%;
+    background-color: #9C7A67;
+    padding: .8rem 1rem;
+
+    display: flex;
+    justify-content: space-between; /*cola metade dos itens na esquerda e a outra metade na direita, deixando um espaço no meio (space between)*/
+    align-items: center;
+}
+
+/*barra de pesquisa*/
+.table__header .input-group { 
+    width: 35%;
+    height: 100%;
+    background-color: #fff5; /*background estilizado*/
+    padding: 0 .8rem;
+    border-radius: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: .99s; /*faz demorar um pouco a passagem do normal pro hover*/
+}
+
+.table__header .input-group:hover {
+    width: 45%; /*antes era 35%, agora expandiu*/
+    background-color: #c79f88;
+    box-shadow: 0 .1rem .4rem #0002;
+}
+
+.table__header .input-group img { /*lupinha*/
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.table__header .input-group input { /*local funcional da pesquisa*/
+    width: 100%;
+    padding: 0 .5rem 0 .3rem;
+    background-color: transparent; /*deixar transparente pra aparecer a formatação do background estilizado*/
+    border: none;
+    outline: none;
+}
+/*FIM barra de pesquisa*/
+
+
+.table__body {
+    width: 95%;
+    max-height: calc(89% - 1.6rem);
+    background-color: #fffb;
+
+    margin: .8rem auto;
+    border-radius: .6rem;
+
+    overflow: auto; /*aparece uma barra de rolagem para ver os itens que não couberam*/
+    overflow: overlay;
+}
+
+
+/*mudando a barra de rolagem*/
+.table__body::-webkit-scrollbar{ 
+    width: 0.5rem;
+    height: 0.5rem;
+}
+
+.table__body::-webkit-scrollbar-thumb{
+    border-radius: .5rem;
+    background-color: #0004;
+    visibility: hidden;
+}
+
+.table__body:hover::-webkit-scrollbar-thumb{ 
+    visibility: visible;
+}
+/*FIM mudando a barra de rolagem*/
+
+table {
+    width: 100%;
+}
+
+td img {
+    width: 36px;
+    height: 36px;
+    margin-right: .5rem;
+    border-radius: 50%;
+
+    vertical-align: middle;
+}
+
+table, th, td {
+    border-collapse: collapse; /*faz as palavras grudadas com o sticky sumirem quando necessário (pra n ficar um em cima do outro)*/
+    padding: 1rem;
+    text-align: left;
+}
+
+thead th {
+    position: sticky; /*faz a linha do head grudar*/
+    top: 0;
+    left: 0;
+    background-color: #d5d1defe;
+    cursor: pointer; /*faz o mouse ficar com aparência pra clicar*/
+    text-transform: capitalize;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #0000000b; /*zebra nas linhas*/
+}
+
+tbody tr {
+    --delay: .1s; /*variável do css que dá um delay*/
+    transition: .5s ease-in var(--delay), background-color 0s; /*duração desse delay*/
+
+    /*ease-in: lento no começo, rápido/abrupto no final
+    ease-out: rápido/abrupto no início, lento no final*/
+}
+
+tbody tr.hide { /*quando o tr está com a classe hide (adcionada pelo js quando o valor pesquisado não bate com nenhuma das linha)*/
+    opacity: 0; /*faz sumir*/
+    transform: translateX(100%); /*move 100% em relação ao eixo X*/
+}
+
+tbody tr:hover {
+    background-color: #fff6 !important;
+}
+
+
+tbody tr.hide td,
+tbody tr.hide td p,
+tbody tr.hide td img { /*Faz a linha que sumiu com a pesquisa (que foi adcionado o hide) Suma pra que não fique espaço a mais na barra de rolagem*/
+    width: 0;
+    height: 0;
+    padding: 0;
+    font: 0 / 0 sans-serif;
+}
+
+
+/*Mudando o Status*/
+.status { /*fundo redondinho do status*/
+    padding: .4rem 0;
+    border-radius: 2rem;
+    text-align: center;
+}
+
+.status.delivered { /*cor de acordo com o status (classe)*/
+    background-color: #86e49d;
+    color: #006b21;
+}
+
+.status.cancelled {
+    background-color: #d893a3;
+    color: #b30021;
+    text-decoration: line-through;
+}
+
+.status.pending {
+    background-color: #ebc474;
+}
+
+.status.shipped {
+    background-color: #6fcaea;
+}
+/*FIM Mudando o Status*/
+
+
+@media (max-width: 1000px) {
+    td:not(:first-of-type) {
+        min-width: 12.1rem;
+    }
+}
+
+footer{
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+    padding-top: 20px;
+    width: 100%;
+}
+.pagination a{
+    font-size: 12px;
+    background-color: #04346A;
+    color: #ffffff;
+    border-color: #4a7db8;
+}
+.breadcrumb a{
+    color: #dea98a;
+}

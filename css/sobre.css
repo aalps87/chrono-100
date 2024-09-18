@@ -332,4 +332,12 @@ footer{
     width: 350px; 
     height: 240px;
 }
-
+.pagination a{
+  font-size: 12px;
+  background-color: #04346A;
+  color: #ffffff;
+  border-color: #4a7db8;
+}
+.breadcrumb a{
+  color: #dea98a;
+}

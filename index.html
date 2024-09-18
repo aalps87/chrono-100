@@ -25,14 +25,13 @@
 
     <!-- Custom Style Sheet -->
     <link rel="stylesheet" href="css/style.css">
-    
 </head>
 
 <body>
     <!--navbar-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.html">
                 <img src="img/sla_logo-removebg-preview.png" alt="Logo" width="90" height="60" class="d-inline-block align-text-top">
             </a>
           <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
@@ -61,6 +60,9 @@
                 </li>
                 <li class="nav-item mx-2">
                   <a class="nav-link s" href="historia.html">História</a>
+                </li>
+                <li class="nav-item mx-2">
+                  <a class="nav-link s" href="tabela.html">Promoções</a>
                 </li>
                 <li class="nav-item dropdown">
                     <button class="btn btn-dark dropdown-toggle ms-3 fs-5" style="color: #9c9b9e;" data-bs-toggle="dropdown" aria-expanded="false">
@@ -119,10 +121,58 @@
     </main>
     <!--end carousel-->
 
+    <!--button group-->
+    <section class="list-group p-5 gap-2 d-flex justify-content-center align-items-center list-group-section">
+        <div class="textos d-flex justify-content-center" style="margin-top: 0; margin-bottom: 30px;">
+            <h1> Conteúdos </h1>
+            <p class="texto-1 mb-1 md:w-100">Sem paciencia para ficar procurando o que quer? Clique em algum conteúdo abaixo, e seja direcionado ao mesmo!</p>
+        </div>
+        <div class="btn-group gap-2 flex-wrap botoes" role="group" aria-label="Basic outlined example">
+                <button type="button" class="btn button-list">
+                    <span class="transition"></span>
+                    <span class="gradient"></span>
+                    <a href="#caracteristicas"><span class="label">Características</span></a>
+                </button>
+                <button type="button" class="btn button-list">
+                    <span class="transition"></span>
+                    <span class="gradient"></span>
+                    <a href="#destaques"><span class="label">Destaques</span></a>
+                </button>
+                <button type="button" class="btn button-list">
+                    <span class="transition"></span>
+                    <span class="gradient"></span>
+                    <a href="#sobre"><span class="label">Sobre</span></a>
+                </button>
+        </div>
+        <div class="btn-group gap-2 flex-wrap botoes" role="group" aria-label="Basic outlined example">
+                <button type="button" class="btn button-list">
+                    <span class="transition"></span>
+                    <span class="gradient"></span>
+                    <a href="#produtos"><span class="label">Produtos</span></a>
+                </button>
+                <button type="button" class="btn button-list">
+                    <span class="transition"></span>
+                    <span class="gradient"></span>
+                    <a href="#clientes"><span class="label">Clientes</span></a>
+                </button>
+                <button type="button" class="btn button-list">
+                    <span class="transition"></span>
+                    <span class="gradient"></span>
+                    <a href="#promocoes"><span class="label">Promoções</span></a>
+                </button>
+                <button type="button" class="btn button-list">
+                    <span class="transition"></span>
+                    <span class="gradient"></span>
+                    <a href="#historia"><span class="label">História</span></a>
+                </button>
+        </div>
+    </section>
+    <!--end button group-->
+
     <!--cards-offer-->
-    <section class="cards-offer">
+    <section id="caracteristicas" class="cards-offer">
         <div class="textos">
-            <h1 class="titulo-1"> CARACTERÍSTICAS <span style="background-color: #9c7a67" class="badge ms-3">INCRÍVEIS</span></h1>
+            <h1  class="titulo-1"> CARACTERÍSTICAS <span style="background-color: #9c7a67" class="badge ms-3">INCRÍVEIS</span></h1>
             <p class="texto-1">Chrono oferece precisão, durabilidade e design sofisticado. Cada modelo combina tecnologia avançada com artesanato tradicional, garantindo estilo e funcionalidade para diversas ocasiões.</p>
         </div>
         <div class="conteudo-imagens">
@@ -154,7 +204,7 @@
     <!--cards-offer-->
 
     <!--product slider-->
-    <main class="main-product" style="background-color: #0F0F0F;">
+    <main  id="destaques" class="main-product" style="background-color: #0F0F0F;">
         <div class="text-product">
             <h1>DESTAQUES</h1>
             <p style="color: #4B5063;">Compre já!</p>
@@ -230,7 +280,7 @@
     <!--end product-slider-->
 
     <!--card container-->
-    <section class="about-us">
+    <section id="sobre" class="about-us">
         <div class="container card-container">
             <div class="about-image">
                 <img src="img/img card.webp" alt="">
@@ -245,7 +295,7 @@
     <!--end card container-->
 
     <!--product-list-->
-    <section class="product-list" style="background-color: #0F0F0F;">
+    <section id="produtos" class="product-list" style="background-color: #0F0F0F;">
         <div class="list-text" style="padding-top: 80px;">
             <h1 class="list-title"> PROMOÇÕES <span style="background-color: #9c7a67" class="badge ms-3">LIMITADAS</span></h1>
             <p class="list-paragrafo">Com nosso destaque único e inovador, preparamos algumas promoções só para você!</p>
@@ -362,7 +412,7 @@
     <!--end product-list-->
       
     <!--testimonials-->
-    <section class="testmonials">
+    <section id="clientes" class="testmonials">
         <div class="wrapper">
             <div class="container testmonial-container">
                 <div class="row">
@@ -393,22 +443,22 @@
     <!--end-testimonials-->
 
     <!--bg-section-->
-    <section class="bg-section" style="background-image: url(img/background-img\ section.jpg);">
+    <section id="promocoes" class="bg-section" style="background-image: url(img/background-img\ section.jpg);">
         <div class="textos-bg">
             <h1 class="title-bg">O preço que cabe no seu<span style="color: #9c7a67">&nbsp;BOLSO</span></h1>
             <h2 class="subtitle-bg">Promoções imperdíveis!</h2>
             <p class="paragrafo-bg">Aproveite nossa oferta exclusiva e transforme seu estilo! Clique no botão abaixo para saber mais!</p>
-            <a href=""><button class="button-bg">Promoções</button></a>
+            <a href="tabela.html"><button class="button-bg">Promoções</button></a>
         </div>
     </section>
     <!--end bg-section-->
 
     <!--informations-cards-->
-    <section class="informations-cards" style="background-color: #0F0F0F;">
+    <section id="historia" class="informations-cards" style="background-color: #0F0F0F;">
         <main class="information-product">
             <div class="text-information">
                 <h1>História</h1>
-                <p style="color: #4B5063;">Chrono ao longo do tempo</p>
+                <p class="text-center" style="color: #4B5063;">Chrono ao longo do tempo</p>
             </div>
             <div class="cards-content-informations">
                 <div class="card1-informations">
@@ -453,27 +503,32 @@
                 <li class="breadcrumb-item active ms-3" style="color: #7584ad;" aria-current="page">Home</li>
             </ol>
         </div>
-        <div aria-label="..."></div>
-            <ul class="pagination pagination-sm mx-3">
-                <li class="page-item active" aria-current="page">
-                <span class="page-link">1</span>
-                </li>
-                <li class="page-item"><a class="page-link" href="contact-us.html">2</a></li>
-                <li class="page-item"><a class="page-link" href="loja.html">3</a></li>
-                <li class="page-item"><a class="page-link" href="product-detail.html">4</a></li>
+        <div aria-label="Page navigation example">
+            <ul class="pagination" style="margin-right: 20px;">
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                  <span aria-hidden="true"><</span>
+                </a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item">
+                <a class="page-link" href="loja.html" aria-label="Next">
+                  <span aria-hidden="true">></span>
+                </a>
+              </li>
             </ul>
         </div>
     </footer>
     <!--end footer-->
 
     <!-- Jquery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Js -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
 
     <!-- Owl Carousel -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
 
     <!--Javascript -->
     <script>

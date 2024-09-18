@@ -25,7 +25,7 @@ main {
 }
 
 /*navbar*/
-a::after {
+nav a::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -38,12 +38,12 @@ a::after {
     transform-origin: bottom left;
 }
 
-a:hover::after {
+nav a:hover::after {
     transform: scaleX(1);
     background-color: rgba(21, 79, 146);
 }
 
-a .no-underline::after {
+nav a .no-underline::after {
     content: none;
 }
 
@@ -156,6 +156,66 @@ a .no-underline::after {
 }
 /*end carousel*/
 
+/*list group*/
+.list-group-section{
+    background-color: #17161A;
+    background: rgba(23, 22, 26, 0.027);
+    box-shadow: 20px 38px 32px 1px rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(10.5px);
+    -webkit-backdrop-filter: blur(15px);
+    margin-top: 70px;
+}
+.button-list {
+    font-size: 14px;
+    padding: 1em 2.7em;
+    font-weight: 500;
+    background: #1f2937;
+    color: white;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.6em;
+    cursor: pointer;
+}
+.gradient {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 0.6em;
+    margin-top: -0.25em;
+  }
+  
+  .label {
+    position: relative;
+    top: -1px;
+  }
+  
+  .transition {
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    transition-duration: 500ms;
+    background-color: rgba(16, 185, 129, 0.6);
+    border-radius: 9999px;
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  button:hover .transition {
+    width: 14em;
+    height: 14em;
+  }
+  .btn:hover{
+    color: white;
+  }
+  button:active {
+    transform: scale(0.97);
+  }
+/*fim list group*/
+
 /*card-offer*/
 .cards-offer{
     height: 100%;
@@ -166,9 +226,7 @@ a .no-underline::after {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    
 }
-
 .textos, .list-text{
     display: flex;
     flex-direction: column;
@@ -176,7 +234,7 @@ a .no-underline::after {
     align-items: center;
     text-align: center;
     color: white;
-    margin-top: 80px;
+    margin-top: 150px;
     margin-bottom: 50px;
 }
 
@@ -209,6 +267,7 @@ a .no-underline::after {
     color: #33567D;
     font-size: 23px;
     padding-top: 30px;
+
 }
 /*end card offer*/
 
@@ -636,7 +695,12 @@ footer{
     width: 350px; 
     height: 240px;
 }
-
+.pagination a{
+    font-size: 12px;
+    background-color: #04346A;
+    color: #ffffff;
+    border-color: #4a7db8;
+}
 @media screen and (max-width: 500px){
     .titulo-1, .list-title{
         font-size:28px;
@@ -677,4 +741,12 @@ footer{
         width: 200px;
         height: 130px;
     }
+}
+
+.breadcrumb a{
+    color: #dea98a;
+}
+.botoes a{
+    text-decoration: none;
+    color: white;
 }
